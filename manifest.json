@@ -1,0 +1,25 @@
+{
+  "name": "Concourse Flight Tracker",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "author": "Sam Coward",
+  "description": "Keep track of failed concourse pipelines",
+  "homepage_url": "https://github.com/idoru/cft",
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "permissions": [
+      "activeTab"
+  ],
+  "short_name": "Concourse Flight Tracker",
+  "content_scripts": [{
+    "matches": [
+      "*://*/*"
+    ],
+    "js": [
+      "src/inject/cft.js"
+    ]
+  }]
+}
